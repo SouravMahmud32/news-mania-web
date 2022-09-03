@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- DaisyUI and tailwind CDN -->
+    <script src="https://kit.fontawesome.com/15075abf38.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <!-- nav bar part start -->
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost normal-case text-xl font-semibold text-purple-500" href="/index.html"><span class="font-extrabold text-emerald-700">news</span>Mania</a>
+            </div>
+            <div class="flex-none">
+              <ul class="menu menu-horizontal font-medium p-0">
+                <li><a href="/index.html">News</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    <div class="w-8 rounded-full">
+                      <img src="https://placeimg.com/80/80/people" />
+                    </div>
+                  </label>
+              </ul>
+            </div>
+          </div>
+        <!-- nav bar part end -->
+    </header>
+    <main>
+        <section>
+            <div class="card lg:card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title text-bold">1. What is the difference between var, let and const?</h2>
+                  <p>var variables can be updated and re-declared within its scope. let variables can be updated but not re-declared. <br> const variables can neither be updated nor re-declared. </p>
+                </div>
+              </div>
+            <div class="card lg:card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title text-bold">2. What is the difference between arrow and regular function?</h2>
+                  <p>The arrow function example above allows a developer to accomplish the same result with fewer lines of code and <br> approximately half the typing.But in reguler function you have to do more code.</p>
+                </div>
+              </div>
+            <div class="card lg:card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">3. What is the difference between forEach(), map(), filter() and find()?</h2>
+                  <p>.forEach() is great you need to execute a function for each individual element in an array. <br> .map() when you want to transform elements in an array. <br>
+                    filter() when you want to select a subset of multiple elements from an array. <br> .find() When you want to select a single element from an array.</p>
+                </div>
+              </div>
+            <div class="card lg:card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">why do we use templatestring?</h2>
+                  <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate <br> like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements</p>
+                </div>
+              </div>
+        </section>
+    </main>
+</body>
+</html>
