@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="snap-none">
     <header>
         <!-- nav bar part start -->
         <div class="navbar bg-base-100">
@@ -42,16 +42,34 @@
         <!-- menu part end -->
         <!-- loader -->
 
-        <section id="loader" class="d-none">
+        <section id="loader" class="hidden">
           <div style="height: 200px;" class="d-flex border justify-content-center align-items-center">
               <div class="spinner-border text-success" role="status">
                 <span class="visually-hidden"></span>
               </div>
             </div>            
       </section>
-
         <section>
-          <div id="card-parent" class="card grid grid-cols-1 g-4 lg:card-side w-full bg-base-100 shadow-xl m-4">
+          <div class="grid grid-rows-1 p-4 grid-flow-col gap-4">
+            <div>
+              <h2 class="pl-2">Sort by view:</h2>
+              <div class="dropdown">
+                <label tabindex="0" class="btn m-1">Default</label>
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Breaking News</a></li>
+                  <li><a>All News</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- ... -->
+            <div class="">
+              <button class="btn btn-outline btn-success">Today's Pick</button>
+              <button class="btn btn-outline btn-success ml-4">Trending</button>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div id="card-parent">
             
           </div>
           <div id="no-found-message" class="hidden m-4 text-6xl font-bold">
@@ -65,7 +83,7 @@
           <div class="modal-box relative">
             <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
 
-            <div id="modal-body">
+            <div id="modal-body" class="grid grid-column-1 p-4 grid-flow-row" >
                 
             </div>
           </div>

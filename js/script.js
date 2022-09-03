@@ -47,6 +47,9 @@ const showNews = (data) => {
   if(data.length === 0){
     noNewsFound.classList.remove('hidden');
   }
+  else{
+    noNewsFound.classList.add('hidden');
+  }
 
   data.forEach((news) => {
     console.log(news);
@@ -57,7 +60,7 @@ const showNews = (data) => {
       <figure><img src=${thumbnail_url} alt="Album"></figure>
             <div class="card-body">
               <h2 class="card-title">New album is released!</h2>
-              <p>${details.length > 500 ? details.slice(0, 500) + '...' : details}</p>
+              <p>${details.length > 700 ? details.slice(0, 700) + '...' : details}</p>
               <footer class="footer items-center p-4 bg-neutral text-neutral-content">
                 <div class="items-center grid-flow-col">
                 <div class="w-10 rounded-full">
@@ -72,7 +75,7 @@ const showNews = (data) => {
             </div> 
             <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             <label for="my-modal-3" 
-                    onclick="showModal('${details}','${thumbnail_url}')"  class="btn btn-primary modal-button">Show Detail</label>
+                    onclick="showModal('${details.replace(/'/g, "\\'").replace(/>/g, "&gt;")}','${thumbnail_url}')"  class="btn btn-primary modal-button">Show Detail</label>
               </div>
             </div>
            </footer>
@@ -87,7 +90,7 @@ const showNews = (data) => {
 const showModal = (details, thumbnail_url)=>{
     console.log(details, thumbnail_url)
     const modalBody = document.getElementById("modal-body");
-    modalBody.innerHTML = '';
+    // modalBody.innerHTML = '';
     modalBody.innerHTML = `
     <img src="${thumbnail_url}"/>
     <p class="py-4">
