@@ -31,13 +31,25 @@
           </div>
         <!-- nav bar part end -->
     </header>
+    <!-- no result found -->
+    <progress id="spinner" class="progress w-full hidden"></progress>
+    <section id="not-found"></section>
     <main>
         <!-- menu part start -->
         <ul id="all-menu" class="menu menu-horizontal lg:menu-vertical bg-base-100 rounded-box m-4">
             
         </ul>
         <!-- menu part end -->
-        <!-- news part start -->
+        <!-- loader -->
+
+        <section id="loader" class="d-none">
+          <div style="height: 200px;" class="d-flex border justify-content-center align-items-center">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+            </div>            
+      </section>
+
         <div id="card-parent" class="card grid grid-cols-1 g-4 lg:card-side w-full bg-base-100 shadow-xl m-4">
             
         </div>
