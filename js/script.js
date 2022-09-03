@@ -51,9 +51,12 @@ const showNews = (data) => {
     noNewsFound.classList.add('hidden');
   }
 
+  document.getElementById('news-count').innerHTML = data.length;
+  
+
   data.forEach((news) => {
     console.log(news);
-    const { thumbnail_url, total_view, author, details } = news;
+    const { thumbnail_url, total_view, author, name, details } = news;
     const cretcardDiv = document.createElement("div");
     cretcardDiv.classList.add("card");
     cretcardDiv.innerHTML = `
@@ -75,7 +78,7 @@ const showNews = (data) => {
             </div> 
             <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
             <label for="my-modal-3" 
-                    onclick="showModal('${details.replace(/'/g, "\\'").replace(/>/g, "&gt;")}','${thumbnail_url}')"  class="btn btn-primary modal-button">Show Detail</label>
+                    onclick="showModal('${details.replace(/'/g, "\\'").replace(/>/g, "&gt;")}','${thumbnail_url}', '${author.name}')"  class="btn btn-primary modal-button">Show Detail</label>
               </div>
             </div>
            </footer>
@@ -87,11 +90,12 @@ const showNews = (data) => {
   toggleSpinner(false);
 };
 
-const showModal = (details, thumbnail_url)=>{
+const showModal = (details, thumbnail_url, name)=>{
     console.log(details, thumbnail_url)
     const modalBody = document.getElementById("modal-body");
     // modalBody.innerHTML = '';
     modalBody.innerHTML = `
+    <h3 class="text-bold">${name}</h3>
     <img src="${thumbnail_url}"/>
     <p class="py-4">
     ${details}
