@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsMania</title>
     <!-- DaisyUI and tailwind CDN -->
-    
+    <script src="https://kit.fontawesome.com/15075abf38.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -33,10 +33,29 @@
     </header>
     <main>
         <!-- menu part start -->
-        <ul id="all-menu" class="menu menu-horizontal lg:menu-vertical bg-base-100 rounded-box">
+        <ul id="all-menu" class="menu menu-horizontal lg:menu-vertical bg-base-100 rounded-box m-4">
             
-          </ul>
+        </ul>
         <!-- menu part end -->
+        <!-- news part start -->
+        <div id="card-parent" class="card grid grid-cols-1 g-4 lg:card-side w-full bg-base-100 shadow-xl m-4">
+            
+        </div>
+        <!-- news part end -->
+        <!-- modal part start -->
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative">
+            <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+
+            <div id="modal-body">
+                <!-- <h3 class="text-lg font-bold">Congratulations random Internet user!</h3>
+                <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!
+                </p> -->
+            </div>
+          </div>
+        </div>
+        <!-- modal part end-->
     </main>
 
 
